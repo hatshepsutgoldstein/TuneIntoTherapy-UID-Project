@@ -1,38 +1,110 @@
-.App {
+body {
+  width: 354px; 
+  height: 767px; 
+  /* iphone 16 with some scaling ref https://www.appmysite.com/blog/the-complete-guide-to-iphone-screen-resolutions-and-sizes/ */
+  border: 2px solid black; 
+  border-radius: 50px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  margin: auto; 
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative; 
+  overflow: hidden;
+
+}
+.content{
+  flex: 1; 
+  overflow-y: auto; 
+  box-sizing: border-box;
+
+
+}
+.header{
+  padding-top: 10%;
+  margin-bottom: 0px;
+}
+.footer{
+  background-color:  #e6edf1;
+  justify-content: space-around; 
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  height: 60px; 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box; 
+}
+.nav-icon{
+  width: 70%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.landing-greeting{
+  border-radius: 16px;
+  margin: 8%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #9ed4f6;
+  box-shadow:#87cefa50;
+  box-shadow: 0px 4px 8px #87cefa50;;
 }
 
-.App-link {
-  color: #61dafb;
+.landing-last-msg{
+  text-align: left;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.icon{
+  padding-right: 2%;
+  width: 5%;
+}
+.textbox{
+  border-radius: 16px;
+  background-color: #d6ecfa;
+  box-shadow:#87cefa50;
+  box-shadow: 0px 4px 8px #c2d8e650;
+  height: 50px;
+  /* height: 500px; */
+  overflow: scroll;
+  text-align: center;
+  font-size: small;
+}
+.textbox p{
+  margin: 0%;
+  padding-left: 6%;
+  padding: 6%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.landing-resource{
+  text-align: left;
+  padding-left: 5%;
+
+}
+.row{
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 5%;
+}
+.resource-category{
+  border-radius: 10px;
+  margin-right: 5%;
+  background-color: rgb(241, 245, 247);
+  box-shadow:#87cefa50;
+  box-shadow: 0px 4px 8px rgba(241, 245, 247, 0.39);
+  padding: 1%;
+  padding-left: 5%;
+  margin-bottom: 5%;
+}
+.resource-card{
+  width: 100px;
+  padding-right: 10%;
+  
 }

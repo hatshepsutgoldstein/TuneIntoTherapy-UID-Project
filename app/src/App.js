@@ -16,16 +16,19 @@ const user = [
 
 function App() {
   return (
+    
     <Router>
-      <Header />
+
+        <Header />
+        <div className='content'>
+        <Routes>
+          <Route path={"/"} element={<LandingPage />} />
+          <Route path={"/home"} element={<Home user={user[0]}/>} />
+        </Routes>
+        </div>
+        <Nav />
+
       
-      <Routes>
-        <Route path={"/"} element={<LandingPage />} />
-        <Route path={"/home"} element={<Home user={user[0]}/>} />
-      </Routes>
-
-
-      <Nav />
   
     </Router>
   );

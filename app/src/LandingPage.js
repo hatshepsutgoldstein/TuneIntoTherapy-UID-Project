@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 
-function LandingPage({user}) {
+function LandingPage() {
     return (
         <div className="LandingPage">
             <h4>We are here to Help You!</h4>
