@@ -22,8 +22,8 @@ function App() {
         <Header />
         <div className='content'>
         <Routes>
-          <Route path={"/"} element={<LandingPage />} />
-          <Route path={"/home"} element={<Home user={user[0]}/>} />
+          <Route path={"/landing"} element={<LandingPage />} />
+          <Route path={"/"} element={<Home user={user[0]}/>} />
         </Routes>
         </div>
         <Nav />

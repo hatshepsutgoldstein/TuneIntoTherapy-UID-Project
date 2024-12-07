@@ -32,6 +32,15 @@ function Home({user}) {
    
                         </div>
                     </div>
+                    <div className='resource-category'id='podcast'>
+                        <h4>test-scrollPodcast</h4>
+                        <div className='row'>
+                            <span><img className='resource-card' src={require(`./img/podcast-1.png`)} /></span>
+                            <span><img className='resource-card' src={require(`./img/podcast-2.png`)} /></span>
+                            <span><img className='resource-card' src={require(`./img/podcast-3.png`)} /></span>
+   
+                        </div>
+                    </div>
                 
             </div>
         </div> 
