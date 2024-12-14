@@ -1,12 +1,20 @@
 import React from "react";
+import podcast1 from './img/podcast-1.png';
+import podcast2 from './img/podcast-2.png';
+import podcast3 from './img/podcast-3.png';
+import Chatbot from './Chatbot';
+
+
+
+const podcastImages = [podcast1, podcast2, podcast3];
 
 function Home({user}) {
     return (
         <div className="LandingPage">
             <div className='landing-greeting'>Good Morning, {user.name}! <br></br>
-             How can we help you today?
+            <Chatbot /> 
              </div>
-
+             
             <div className='landing-last-msg'> 
                 <h4>
                     <img 
@@ -34,7 +42,7 @@ function Home({user}) {
                                 <span key={index}>
                                     <img 
                                         className='resource-card' 
-                                        src={require(`./img/productivity-1.png`)}
+                                        src={require(`./img/${img}.png`)}
                                         alt={`Productivity Resource ${index + 1}`}
                                     />
                                 </span>
@@ -44,22 +52,18 @@ function Home({user}) {
                     <div className='resource-category'id='podcast'>
                         <h4>Podcast</h4>
                         <div className='row'>
-                            <span><img className='resource-card' src={require(`./img/podcast-1.png`)} /></span>
-                            <span><img className='resource-card' src={require(`./img/podcast-2.png`)} /></span>
-                            <span><img className='resource-card' src={require(`./img/podcast-3.png`)} /></span>
-   
+                            {podcastImages.map((src, index) => (
+                                <span key={index}>
+                                    <img 
+                                        className="resource-card"
+                                        src={src}
+                                        alt={`Podcast Resource ${index + 1}`}
+                                    />
+                                </span>
+                            ))}
                         </div>
                     </div>
-                    <div className='resource-category'id='podcast'>
-                        <h4>test-scrollPodcast</h4>
-                        <div className='row'>
-                            <span><img className='resource-card' src={require(`./img/podcast-1.png`)} /></span>
-                            <span><img className='resource-card' src={require(`./img/podcast-2.png`)} /></span>
-                            <span><img className='resource-card' src={require(`./img/podcast-3.png`)} /></span>
-   
-                        </div>
-                    </div>
-                
+                    
             </div>
         </div> 
     );

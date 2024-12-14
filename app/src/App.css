@@ -1,5 +1,4 @@
 body {
-  
   /* width: 354px; 
   height: 767px;  */
   /* iphone 16 with some scaling ref https://www.appmysite.com/blog/the-complete-guide-to-iphone-screen-resolutions-and-sizes/ */
@@ -23,8 +22,6 @@ body {
   overflow-y:scroll; 
     position:relative;
     height:780px;
-
-
 }
 .header{
   padding-top: 10%;
@@ -42,8 +39,7 @@ body {
   bottom: 0;
   width: 100%;
   box-sizing: border-box; 
-  /* border: 2px solid black;  */
-  border-radius: 50px; 
+  border-radius: 0px; 
 }
 .nav-icon{
   width: 70%;
@@ -59,7 +55,6 @@ body {
   box-shadow:#87cefa50;
   box-shadow: 0px 4px 8px #87cefa50;;
 }
-
 .landing-last-msg{
   text-align: left;
   padding-left: 5%;
@@ -115,3 +110,210 @@ body {
   padding-right: 10%;
   
 }
+
+.message-link {
+  color: darkblue;
+  text-decoration: strong;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.message-link:hover {
+  color: darkblue;
+}
+
+
+
+.landing-resource {
+  margin: 20px 0;
+}
+
+.resource-category {
+  margin-bottom: 20px;
+}
+
+.resource-row {
+  display: flex;
+  gap: 50px;
+  overflow-x: auto; 
+  padding: 10px 0;
+}
+
+.resource-card {
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0; 
+}
+
+/* createaccount css */
+.create-account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:  #9ed4f6;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+.create-account-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.create-account-container p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.account-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.account-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account-form .form-group input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.create-account-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.create-account-button:hover {
+  background-color: #333;
+}
+
+.login-link {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:  #9ed4f6;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+.login-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.login-button:hover {
+  background-color: #333;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
