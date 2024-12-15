@@ -11,11 +11,11 @@ function Messaging() {
           //setMessages([...messages, {text: newMessage, sender: "user"}]);
           setNewMessage('');
       }
-    }
+    };
 
     const handleInputChange = (e) => {
         setNewMessage(e.target.value);
-    }
+    };
     
 
   return (
@@ -25,13 +25,20 @@ function Messaging() {
         </div>
         <div className="messaging-list">
             {chatMessages.map((message, index) => (
-                <div key={index} className={`message-item ${message.sender === 'user' ? 'user-message' : 'other-message'}`}>
-                    {message.text}
+                <div 
+                    key={index} 
+                    className={`message-item ${
+                        message.sender === 'user' ? 'user-message' : 'other-message'}`}>
+                    {message.fullMessage || message.text}
                 </div>
             ))}
         </div>
         <div className="messaging-input-area">
-            <input type="text" value={newMessage} onChange={handleInputChange} placeholder="Type your message..." />
+            <input 
+                type="text" 
+                value={newMessage} 
+                onChange={handleInputChange} 
+                placeholder="Type your message..." />
             <button onClick={handleSendMessage}>Send</button>
         </div>
     </div>

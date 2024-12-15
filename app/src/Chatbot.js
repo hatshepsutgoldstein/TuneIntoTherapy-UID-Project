@@ -57,17 +57,25 @@ function Chatbot() {
         const maxOutputLength = 200; // Caps text output
         let botResponse = result.response.text();
   
-        if (botResponse.length > maxOutputLength) {
+       /* if (botResponse.length > maxOutputLength) {
           botResponse = botResponse.substring(0, maxOutputLength) + "..."; // Truncate and add ellipsis
-        }
+        } */
   
         console.log("Received response:", result.response.text());
         setMessages((prevMessages) => {
-            const updatedMessages = [...prevMessages,
-            { sender: "bot", text: botResponse, link: "/messaging", linkText: ' ... Open messaging page' } ];
-          setChatMessages(updatedMessages)
-          return updatedMessages
-        });
+          const updatedMessages = [
+              ...prevMessages,
+              {
+                  sender: "bot",
+                  text: botResponse.substring(0, maxOutputLength) + "...", // Truncated text for the chat feed
+                  fullMessage: result.response.text(), // Save the full response
+                  link: "/messaging",
+                  linkText: " ... Open messaging page",
+              },
+          ];
+          setChatMessages(updatedMessages);
+          return updatedMessages;
+      });
       } catch (error) {
         console.error("Error Communicating with Tune into Therapy:", error);
   

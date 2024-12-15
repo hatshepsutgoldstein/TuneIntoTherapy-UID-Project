@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@example.com",
+            "password_hash": "test123"
+        },
+        {
+            "id": 2,
+            "name": "Kristen Brown",
+            "email": "Kristen@example.com",
+            "password_hash": "cook123"
+        },
+        {
+            "id": 3,
+            "name": "Kusuma Jaipam",
+            "email": "Kusuma@example.com",
+            "password": "Dune123"
+        }
+    ]
+}
