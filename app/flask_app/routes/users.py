@@ -1,7 +1,4 @@
 from flask import Blueprint, request, jsonify
-from werkzeug.security import generate_password_hash, check_password_hash
-import jwt
-import datetime
 import json
 import os
 
@@ -32,9 +29,7 @@ def register():
     if not (name and email and password):
         return jsonify({"error": "Missing required fields"}), 400
 
-    # Load existing users
-    with open('flask_app/data.json', 'r') as f:
-        users_data = json.load(f)
+    users_data = load_data()
 
     # Check if email already exists
     if any(user['email'] == email for user in users_data['users']):
@@ -45,9 +40,10 @@ def register():
         "id": len(users_data['users']) + 1,
         "name": name,
         "email": email,
-        "password": password  # Store plain text password
+        "password": password  
     }
     users_data['users'].append(new_user)
+    save_data(users_data)
 
     # Save to data.json
     with open('flask_app/data.json', 'w') as f:
@@ -62,7 +58,7 @@ def get_all_users():
     print("GET /api/users/ was called!")
     data = load_data()
     users = [{"id": user["id"], "name": user["name"]} for user in data['users']]
-    print("Returning data:", users)  # Debugging print
+    print("Returning data:", users)  
     return jsonify(users)
 
 # POST Login user
@@ -72,9 +68,7 @@ def login():
     email = data.get('email')
     password = data.get('password')
 
-    # Load existing users
-    with open('flask_app/data.json', 'r') as f:
-        users_data = json.load(f)
+    users_data = load_data()
 
     # Find user with matching email and password
     user = next((u for u in users_data['users'] if u['email'] == email and u['password'] == password), None)
